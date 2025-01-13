@@ -1,0 +1,246 @@
+@use "../styles/global.scss" as *;
+@use "../styles/_variables.scss" as *;
+
+.card_home_page {
+  a {
+    text-decoration: none;
+    color: $white;
+          background-color: red;
+
+  }
+  .home_carousel_partner {
+    padding: 2rem 0;
+  
+    .swiper-wrapper {
+      transition-timing-function: linear;
+
+    }
+  
+    .partner_slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      
+    }
+  
+    .device_sli {
+      max-width: 100%;
+      height: auto;
+      opacity: 0.9; // Transparence légère
+      transition: opacity 0.3s ease;
+  
+      &:hover {
+        opacity: 1; // Pleine visibilité au survol
+      }
+    }
+  }
+  
+  .device_sli {
+    max-width: 100%;
+    height: auto; // Maintien du ratio d'image
+    text-align: center;
+    
+  }
+
+  span {
+    font-weight: 600;
+    color: $main-color;
+  }
+
+  .home_container_both {
+    display: flex;
+    width: 100%;
+    margin: 100px 0;
+    
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    .home_container_left_side {
+      width: 50%;
+      margin: 10px;
+      padding-right: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+
+
+      @include mobile {
+        width: 100%;
+        text-align: center;
+      }
+
+      @include tablet {
+        width: 100%;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 2em;
+      }
+
+      p {
+        font-size: 1.2em;
+        padding: 15px 0;
+      }
+    }
+
+    .home_container_right_side {
+      width: 50%;
+      margin: 10px;
+      border-radius: 15px;
+      padding: 25px;
+      cursor: pointer;
+      background: linear-gradient(90deg, rgba(4, 162, 223, 1) 0%, rgba(0, 206, 255, 1) 100%);
+      transition: transform 0.3s, box-shadow 0.3s;
+
+      @include mobile {
+        width: 100%;
+        text-align: center;
+      }
+
+      @include tablet {
+        text-align: center;
+      }
+
+      &:hover,
+      &:focus {
+        transform: scale(1.02);
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+      }
+
+      h1 {
+        color: $white;
+
+        @include mobile {
+          font-size: 2em;
+        }
+      }
+
+      p {
+        color: $white;
+        font-size: 1.2em;
+      }
+
+      .img_right_side {
+        padding-top: 50px;
+        width: 100%;
+        height: auto; // Maintien du ratio d'image
+      }
+    }
+  }
+
+  .home_banner_bot {
+    background: linear-gradient(90deg, rgba(4, 162, 223, 1) 0%, rgba(0, 206, 255, 1) 100%);
+    color: $white;
+    text-align: center;
+    padding: 40px 0;
+
+    h1 {
+      color: $white;
+      font-size: 2.5em;
+    }
+
+    h2 {
+      padding-bottom: 30px;
+      font-size: 2em;
+    }
+
+    h3 {
+      margin: 20px;
+      font-size: 1.2em;
+    }
+
+    .home_services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      @include mobile {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .home_services_icon {
+        font-size: 3em;
+        cursor: pointer;
+        color: $white;
+        transition: transform 0.3s;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+
+      .home_services_card {
+        margin: 20px;
+        color: $white;
+        text-align: center;
+        max-width: 300px;
+
+        h1 {
+          font-size: 1.5em;
+          padding: 15px 0;
+        }
+
+        p {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+
+  .home_conseils_sli {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .home_conseils_sli_left,
+    .home_conseils_sli_right {
+      width: 45%;
+
+      @include mobile {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .home_conseils_sli_right {
+      p {
+        font-size: 1.2em;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .home_carousel_partner {
+    padding: 50px 0;
+    text-align: center;
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+
+      img {
+        max-width: 100%;
+        height: auto; // Maintien du ratio d'image
+      }
+    }
+
+    .swiper-pagination-bullet {
+      background-color: $main-color;
+    }
+  }
+}
