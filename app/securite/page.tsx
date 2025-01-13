@@ -5,6 +5,7 @@ import {
   faFileShield,
   faShieldHeart,
 } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image"; // Import du composant Image de Next.js
 
 function Securite() {
   return (
@@ -14,10 +15,13 @@ function Securite() {
         <h2 className="informatique_section_title">Sécurité du Système d&apos;information</h2>
         <div className="card_informatique">
           <div className="card_informatique_left_side">
-            <img
+            {/* Remplacement de <img> par le composant <Image> */}
+            <Image
               alt="logo_solution_logique_informatique"
-              src="assets/securite.webp"
-            ></img>
+              src="/assets/securite.webp" // Chemin relatif de l'image
+              width={400} // Largeur de l'image (ajustez selon vos besoins)
+              height={300} // Hauteur de l'image (ajustez selon vos besoins)
+            />
           </div>
           <div className="card_informatique_right_side">
             <div className="informations_informatique">

@@ -1,6 +1,5 @@
 import "./styles/global.scss";
 import "./styles/app.scss";
-import Image from "next/image";
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
 import Navbar from "./navbar/page";

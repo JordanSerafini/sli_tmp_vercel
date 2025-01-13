@@ -4,6 +4,7 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
+    "types": ["@types/styled-components"], 
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
