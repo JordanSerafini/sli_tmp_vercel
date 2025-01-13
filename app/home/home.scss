@@ -1,6 +1,14 @@
 @use "../styles/global.scss" as *;
 @use "../styles/_variables.scss" as *;
 
+.partner_slide {
+  will-change: transform;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .card_home_page {
   a {
     text-decoration: none;

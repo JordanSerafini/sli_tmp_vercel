@@ -19,6 +19,23 @@ import { Autoplay, FreeMode } from "swiper/modules";
 import Link from "next/link";
 
 function Home() {
+  // Liste des partenaires
+  const partners = [
+    "ebp.webp",
+    "dell.webp",
+    "stormshield.webp",
+    "3cx.webp",
+    "vmware.webp",
+    "lenovo.webp",
+    "oxatis.webp",
+    "kyocera.webp",
+  ];
+
+  const iconWidth = 150;
+  const iconSpacing = 95;
+  const totalWidth = partners.length * (iconWidth + iconSpacing);
+  const speed = totalWidth / 0.5;
+
   return (
     <main className="card_home_page">
       <div className="container">
@@ -163,57 +180,23 @@ function Home() {
             disableOnInteraction: false,
             pauseOnMouseEnter: false,
           }}
-          speed={2000}
+          speed={speed} 
           loop={true}
           freeMode={true}
           grabCursor={false}
           slidesPerView="auto"
-          spaceBetween={95}
+          spaceBetween={iconSpacing}
         >
-          {[
-            "ebp.webp",
-            "dell.webp",
-            "stormshield.webp",
-            "3cx.webp",
-            "vmware.webp",
-            "lenovo.webp",
-            "oxatis.webp",
-            "kyocera.webp",
-          ].map((imgSrc, index) => (
+          {[...partners, ...partners].map((imgSrc, index) => (
             <SwiperSlide key={index} className="partner_slide">
               <Image
                 className="device_sli"
                 alt={`Logo ${imgSrc}`}
                 src={`/assets/${imgSrc}`}
-                width={150}
+                width={iconWidth}
                 height={100}
                 style={{
-                  width: "150px",
-                  height: "100px",
-                  objectFit: "contain",
-                }}
-              />
-            </SwiperSlide>
-          ))}
-          {[
-            "ebp.webp",
-            "dell.webp",
-            "stormshield.webp",
-            "3cx.webp",
-            "vmware.webp",
-            "lenovo.webp",
-            "oxatis.webp",
-            "kyocera.webp",
-          ].map((imgSrc, index) => (
-            <SwiperSlide key={`duplicate-${index}`} className="partner_slide">
-              <Image
-                className="device_sli"
-                alt={`Logo ${imgSrc}`}
-                src={`/assets/${imgSrc}`}
-                width={150}
-                height={100}
-                style={{
-                  width: "150px",
+                  width: `${iconWidth}px`,
                   height: "100px",
                   objectFit: "contain",
                 }}
