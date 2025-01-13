@@ -19,7 +19,6 @@ import { Autoplay, FreeMode } from "swiper/modules";
 import Link from "next/link";
 
 function Home() {
-  // Liste des partenaires
   const partners = [
     "ebp.webp",
     "dell.webp",
